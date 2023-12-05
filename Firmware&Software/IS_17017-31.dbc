@@ -1,0 +1,165 @@
+VERSION ""
+
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    VAL_TABLE_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIGTYPE_VALTYPE_
+    BO_TX_BU_
+    BA_DEF_REL_
+    BA_REL_
+    BA_DEF_DEF_REL_
+    BU_SG_REL_
+    BU_EV_REL_
+    BU_BO_REL_
+    SG_MUL_VAL_
+
+BS_: 
+BU_: EVSE EV 
+BO_ 1280 IS17017_EV_Param_1: 8 EV
+   SG_ Energy_transfer_system_error : 0|1@1+ (1,0) [0|1] "" EVSE
+   SG_ Battery_overvoltage : 1|1@1+ (1,0) [0|1] "" EVSE
+   SG_ Battery_undervoltage : 2|1@1+ (1,0) [0|1] "" EVSE
+   SG_ Battery_current_deviation_error : 3|1@1+ (1,0) [0|1] "" EVSE
+   SG_ High_battery_temperature : 4|1@1+ (1,0) [0|1] "" EVSE
+   SG_ Battery_voltage_deviation_error : 5|1@1+ (1,0) [0|1] "" EVSE
+   SG_ EV_charging_enabled : 8|1@1+ (1,0) [0|1] "" EVSE
+   SG_ EV_charging_position : 10|1@1+ (1,0) [0|1] "" EVSE
+   SG_ EV_charging_stop_control : 11|1@1+ (1,0) [0|1] "" EVSE
+   SG_ Wait_request_to_delay_energy_transfer : 12|1@1+ (1,0) [0|1] "" EVSE
+   SG_ Digital_Communication_Toggle : 13|1@1+ (1,0) [0|1] "" EVSE
+   SG_ Requested_DC_output_current : 16|16@1+ (0.1,0) [0|120] "A" EVSE
+   SG_ DC_output_voltage_target_parameter : 32|16@1+ (0.1,0) [0|120] "V" EVSE
+   SG_ DC_output_voltage_limit_parameter : 48|16@1+ (0.1,0) [0|120] "V" EVSE
+
+BO_ 1281 IS17017_EV_Param_2: 8 EV
+   SG_ Control_Protocol_number : 0|8@1+ (1,0) [0|254] "" EVSE
+   SG_ Charging_rate : 8|8@1+ (1,0) [0|100] "%" EVSE
+   SG_ Maximum_charging_time : 16|16@1+ (1,0) [0|65534] "min" EVSE
+   SG_ Estimated_charging_time : 32|16@1+ (1,0) [0|65534] "min" EVSE
+
+BO_ 1282 IS17017_EV_Param_3: 8 EV
+   SG_ EV_Voltage_Control_Option : 0|1@1+ (1,0) [0|1] "" EVSE
+
+BO_ 1283 IS17017_EV_Param_4: 8 EV
+   SG_ Requested_Charging_Mode : 0|1@1+ (1,0) [0|1] "" EVSE
+   SG_ EV_Connector_Latch_Status : 1|1@1+ (1,0) [0|1] "" EVSE
+   SG_ EV_Charging_Error : 2|1@1+ (1,0) [0|1] "" EVSE
+   SG_ AC_Voltage_Error : 3|1@1+ (1,0) [0|1] "" EVSE
+   SG_ EV_On_Board_Charger_Error : 4|1@1+ (1,0) [0|1] "" EVSE
+
+BO_ 1284 IS17017_EV_Param_5: 8 EV
+   SG_ AC_Voltage_Limit_Max : 0|16@1+ (0.1,0) [0|500] "V" EVSE
+   SG_ AC_Voltage_Limit_Min : 16|16@1+ (0.1,0) [0|500] "V" EVSE
+   SG_ Rated_On_Board_Charger_Current : 32|16@1+ (0.1,0) [0|32] "A" EVSE
+   SG_ Rated_On_Board_Charger_Power : 48|8@1+ (0.1,0) [0|18] "" EVSE
+
+BO_ 1408 IS17017_EV_ID_Low: 8 EV
+   SG_ EV_ID_Low : 7|64@4+ (1,0) [0|1] "" EVSE
+
+BO_ 1409 IS17017_EV_ID_High: 8 EV
+   SG_ EV_ID_High : 7|64@4+ (1,0) [0|1] "" EVSE
+
+BO_ 1410 IS17017_EV_Protocol_ID_Low: 8 EV
+   SG_ EV_Protocol_ID_Low : 7|64@4+ (1,0) [0|1] "" EVSE
+
+BO_ 1411 IS17017_EV_Protocol_ID_High: 8 EV
+   SG_ EV_Protocol_ID_High : 7|64@4+ (1,0) [0|1] "" EVSE
+
+BO_ 1416 IS17017_EV_VIN_Low: 8 EV
+   SG_ EV_VIN_Low : 7|64@4+ (1,0) [0|1] "" EVSE
+
+BO_ 1417 IS17017_EV_VIN_Mid: 8 EV
+   SG_ EV_VIN_Mid : 7|64@4+ (1,0) [0|1] "" EVSE
+
+BO_ 1418 IS17017_EV_VIN_High: 8 EV
+   SG_ EV_VIN_High : 7|64@4+ (1,0) [0|1] "" EVSE
+
+BO_ 1288 IS17017_SE_Param_1: 8 EVSE
+   SG_ Charging_system_error : 0|1@1+ (1,0) [0|1] "" EV
+   SG_ EV_Supply_equipment_Malfunction : 1|1@1+ (1,0) [0|1] "" EV
+   SG_ EV_incompatibility : 2|1@1+ (1,0) [0|1] "" EV
+   SG_ EV_supply_equipment_stop_control : 8|1@1+ (1,0) [0|1] "" EV
+   SG_ EV_supply_equipment_status : 9|1@1+ (1,0) [0|1] "" EV
+   SG_ EV_supply_equipment_ready : 11|1@1+ (1,0) [0|1] "" EV
+   SG_ Waiting_state_before_charging_start : 12|1@1+ (1,0) [0|1] "" EV
+   SG_ Rated_DC_output_voltage : 16|16@1+ (0.1,0) [0|120] "V" EV
+   SG_ Available_DC_output_current : 32|16@1+ (0.1,0) [0|100] "A" EV
+   SG_ Confirmed_DC_output_voltage_limit : 48|16@1+ (0.1,0) [0|120] "V" EV
+
+BO_ 1289 IS17017_SE_Param_2: 8 EVSE
+   SG_ Control_protocol_number : 0|8@1+ (1,0) [0|254] "" EV
+   SG_ Available_DC_output_power : 8|8@1+ (50,0) [0|12700] "W" EV
+   SG_ DC_Output_voltage : 16|16@1+ (0.1,0) [0|250] "V" EV
+   SG_ DC_output_current : 32|16@1+ (0.1,0) [0|150] "A" EV
+   SG_ Remaining_charging_time : 48|16@1+ (1,0) [0|65534] "min" EV
+
+BO_ 1296 IS17017_SE_Param_3: 8 EVSE
+   SG_ SE_Voltage_Control_Option : 1|1@1+ (1,0) [0|1] "" EV
+
+BO_ 1290 IS17017_SE_Param_4: 8 EVSE
+   SG_ AC_Charging_Capability : 0|1@1+ (1,0) [0|1] "" EV
+   SG_ DC_Charging_Capability : 1|1@1+ (1,0) [0|1] "" EV
+   SG_ Safe_to_Unlatch_Connector : 2|1@1+ (1,0) [0|1] "" EV
+   SG_ Rectifier_Overload_Alarm : 8|1@1+ (1,0) [0|1] "" EV
+   SG_ DC_Over_Current : 9|1@1+ (1,0) [0|1] "" EV
+   SG_ DC_Over_Voltage : 10|1@1+ (1,0) [0|1] "" EV
+   SG_ DC_Under_Voltage : 11|1@1+ (1,0) [0|1] "" EV
+   SG_ Over_Temperature : 12|1@1+ (1,0) [0|1] "" EV
+   SG_ CAN_Comm_Fail : 13|1@1+ (1,0) [0|1] "" EV
+   SG_ MCB_Error : 16|1@1+ (1,0) [0|1] "" EV
+   SG_ AC_Over_Current : 17|1@1+ (1,0) [0|1] "" EV
+   SG_ AC_Over_Voltage : 18|1@1+ (1,0) [0|1] "" EV
+   SG_ AC_Under_Voltage : 19|1@1+ (1,0) [0|1] "" EV
+   SG_ Earth_Fault : 20|1@1+ (1,0) [0|1] "" EV
+
+BO_ 1291 IS17017_SE_Param_5: 8 EVSE
+   SG_ Available_AC_Output_current : 0|16@1+ (0.1,0) [0|32] "A" EV
+   SG_ AC_Output_Voltage_Limit_Max : 16|16@1+ (0.1,0) [0|500] "V" EV
+   SG_ AC_Output_Voltage_Limit_Min : 32|16@1+ (0.1,0) [0|500] "V" EV
+   SG_ AC_Output_Current : 48|16@1+ (0.1,0) [0|100] "A" EV
+
+BO_ 1412 IS17017_SE_ID_Low: 8 EVSE
+   SG_ EVSE_ID_Low : 7|64@4+ (1,0) [0|1] "" EV
+
+BO_ 1413 IS17017_SE_ID_High: 8 EVSE
+   SG_ EVSE_ID_HIgh : 7|64@4+ (1,0) [0|1] "" EV
+
+BO_ 1414 IS17017_SE_Protocol_ID_Low: 8 EVSE
+   SG_ EVSE_Protocol_ID_Low : 7|64@4+ (1,0) [0|1] "" EV
+
+BO_ 1415 IS17017_SE_Protocol_ID_High: 8 EVSE
+   SG_ EVSE_Protocol_ID_Low : 7|64@4+ (1,0) [0|1] "" EV
+
+BA_DEF_ BO_ "GenMsgBackgroundColor" STRING ;
+BA_DEF_ BO_ "GenMsgForegroundColor" STRING ;
+BA_DEF_ BO_ "isj1939EVSEc" INT 0 0;
+BA_DEF_DEF_ "GenMsgBackgroundColor" "#ffffff";
+BA_DEF_DEF_ "GenMsgForegroundColor" "#000000";
+BA_DEF_DEF_ "isj1939EVSEc" 0;
+VAL_ 1280 EV_charging_position 0 "Appropriate_Position" 1 "Inappropriate_Position";
+VAL_ 1280 Digital_Communication_Toggle 0 "Normal_Conduction_During_Commn" 1 "Request_to_Stop_Commn";
+VAL_ 1282 EV_Voltage_Control_Option 0 "NO_Voltage_Control" 1 "Voltage_Control_Enabled";
+VAL_ 1283 Requested_Charging_Mode 0 "AC_Charging" 1 "DC_Charging";
+VAL_ 1283 EV_Connector_Latch_Status 0 "Unlatched" 1 "Latched";
+VAL_ 1288 EV_incompatibility 0 "Compatible" 1 "Incompatible";
+VAL_ 1288 EV_supply_equipment_status 0 "StanEVSEy" 1 "Charging";
+VAL_ 1288 EV_supply_equipment_ready 0 "Not_Ready" 1 "Ready";
+VAL_ 1296 SE_Voltage_Control_Option 0 "No_Voltage_Control" 1 "Voltage_Control_Enbld";
