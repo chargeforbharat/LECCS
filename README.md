@@ -27,9 +27,4 @@ LECCS is the charging standard comprising of two parts
  You should have received a copy of the GNU General Public License  along with this repository.  If not, see [https://www.gnu.org/licenses/] 
 
 
-## Folder structure
- A new folder structure for organizing all information in this repository will be updated in following commits.
-    
-## How do you get IS17017 Part-31 communication protocol standard document?
-Part-31 or communication protocol is expected to be published any time now by BIS.  
-Unfortunately we cannot share this document publicly till such time, but if you need more information about the document, please send a mail to info@chargeforbharat.org and we will accomodate your requests.
+
